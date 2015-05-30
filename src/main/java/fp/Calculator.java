@@ -62,7 +62,13 @@ public class Calculator {
 	 * función debe devolver el número de aciertos.
 	 */
 	static Integer checkMyBet(List<Integer> apuesta, List<Integer> aciertos) {
-		return null;
+		int respuesta = 0;
+		
+		if(apuesta.containsAll(aciertos) == true)
+			respuesta = 6;
+		else
+			respuesta = 0;
+		return respuesta;
 	}
 
 	/*
