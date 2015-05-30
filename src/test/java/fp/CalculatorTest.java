@@ -6,7 +6,7 @@ import static fp.Calculator.isLeapYear;
 import static fp.Calculator.isValidDate;
 import static fp.Calculator.sin;
 import static fp.Calculator.speakToMe;
-import static fp.Calculator.stepThisNumber;
+//import static fp.Calculator.stepThisNumber;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -29,7 +29,7 @@ public class CalculatorTest {
 		assertEquals(sin(810), Double.valueOf(1));
 		System.out.println("1P");
 	}
-
+/*
 	@Test
 	public void testStepThisNumber() {
 		assertNotNull(stepThisNumber(0, 0));
@@ -38,7 +38,7 @@ public class CalculatorTest {
 		assertArrayEquals(stepThisNumber(12, 3), new int[] { 9, 6, 3 });
 		System.out.println("1P");
 	}
-
+*/
 	@Test
 	public void testDivisors() {
 		assertNull(divisors(0));

@@ -15,11 +15,28 @@ public class Calculator {
 
 	/*
 	 * Escribir todos los números del number al 0 de step en step.
-	 */
+	
 	static int[] stepThisNumber(int number, int step) {
-		return null;
+		int resultado[] = new int[10];
+		int cont = 0;
+		int numero = 0;
+		
+		for(cont = 0; cont < 10; cont++) {
+			System.out.println("number " + number);
+			System.out.println("step " + step);
+			numero = number - step;
+			if(numero <= 0) {
+				break;
+			}
+			step++;
+			resultado[cont] = numero;
+			System.out.println("resultado " + (resultado[cont]));
+		}
+		System.out.println(resultado[2]);
+		return resultado;
 	}
-
+	*/
+	
 	/*
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
 	 * divisores que tiene.
