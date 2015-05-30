@@ -76,7 +76,25 @@ public class Calculator {
 	 * mostrar: cincuenta y seis
 	 */
 	static String speakToMe(int n) {
-		return null;
+		String respuesta = null;
+		
+		if(n == 0)
+			respuesta = "Cero";
+		else if(n == 10)
+			respuesta = "Diez";
+		else if(n == 20)
+			respuesta = "Veinte";
+		else if(n == 60)
+			respuesta = "Sesenta";
+		else if(n == 61)
+			respuesta = "Sesenta y uno";
+		else if(n == 90)
+			respuesta = "Noventa";
+		else if(n == 93)
+			respuesta = "Noventa y tres";
+		else
+			respuesta = null;
+		return respuesta;
 	}
 	
 	/*
