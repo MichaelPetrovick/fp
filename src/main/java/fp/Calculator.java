@@ -102,7 +102,28 @@ public class Calculator {
 	 * dd-MM-yyyy
 	 */
 	static boolean isLeapYear(String fecha) {
-		return false;
+		boolean respuesta = false;
+		int aux = 0;
+		String anyoString = null;
+		int anyoInt = 0;
+		
+		for(aux = fecha.length() - 1; aux >= 0; aux--) {
+			if(fecha.charAt(aux) == '-') {
+				break;
+			}
+		}
+		
+		anyoString = fecha.substring(aux + 1, fecha.length());
+		System.out.println(anyoString);
+		anyoInt = Integer.parseInt(anyoString);
+		System.out.println(anyoInt);
+		
+		if(anyoInt % 4 == 0 && anyoInt % 100 != 0 || anyoInt % 400 == 0)
+			respuesta = true;
+		else
+			respuesta = false;
+		System.out.println(respuesta);
+		return respuesta;
 	}
 
 	/*
