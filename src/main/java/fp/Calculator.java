@@ -1,5 +1,6 @@
 package fp;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class Calculator {
@@ -130,6 +131,76 @@ public class Calculator {
 	 * este metodo calgula la tangente de un angulo
 	 */
 	static boolean isValidDate(String date) {
+		Calendar miCalendario;
+		miCalendario = Calendar.getInstance();
+		int anyoActual;
+		
+		anyoActual = miCalendario.get(Calendar.YEAR);
+		
+		boolean respuesta = false;
+		int aux = 0;
+		String anyoString = null;
+		int anyo = 0;
+		String mesString = null;
+		int mes = 0;
+		String diaString = null;
+		int dia = 0;
+		
+		for(aux = date.length() - 1; aux >= 0; aux--) {
+			if(date.charAt(aux) == '-') {
+				break;
+			}
+		}
+		
+		anyoString = date.substring(aux + 1, date.length());
+		anyo = Integer.parseInt(anyoString);
+		
+		for(aux = date.length() - 1; aux >= 0; aux--) {
+			if(date.charAt(aux) == '-') {
+				break;
+			}
+		}
+		
+		mesString = date.substring(aux - 2, date.length() - 5);
+		mes = Integer.parseInt(mesString);
+		
+		for(aux = date.length() - 1; aux >= 0; aux--) {
+			if(date.charAt(aux) == '-') {
+				break;
+			}
+		}
+		
+		diaString = date.substring(aux - 2, date.length() - 8);
+		dia = Integer.parseInt(diaString);
+		
+		if(anyo > 0 && anyo < anyoActual) {
+			
+			if(mes > 0 && mes <= 12) {
+				
+				if((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || 
+						mes == 10 || mes == 12) && (dia > 0 && dia <= 31) )
+					
+					respuesta = true;
+				
+				else if((mes == 4 || mes == 6 || mes == 9 || mes == 11) && (dia > 0 && dia <= 30) )
+					
+					respuesta = true;
+				
+				else if(mes == 2) {
+					
+					if(anyo % 4 == 0 && (anyo % 100 == 0 || anyo % 400 == 0)) {
+						if(dia > 0 && dia <= 29)
+							respuesta = true;
+					}
+					
+					else {
+						if(dia > 0 && dia <= 28)
+							respuesta = true;
+					}
+				}
+			}
+		}
+		
 		return false;
 	}
 }
