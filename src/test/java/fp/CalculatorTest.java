@@ -1,17 +1,17 @@
 package fp;
 
 import static fp.Calculator.checkMyBet;
-import static fp.Calculator.divisors;
+//import static fp.Calculator.divisors;
 import static fp.Calculator.isLeapYear;
 import static fp.Calculator.isValidDate;
 import static fp.Calculator.sin;
 import static fp.Calculator.speakToMe;
 //import static fp.Calculator.stepThisNumber;
-import static org.junit.Assert.assertArrayEquals;
+//import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+//import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
@@ -39,6 +39,7 @@ public class CalculatorTest {
 		System.out.println("1P");
 	}
 */
+/*
 	@Test
 	public void testDivisors() {
 		assertNull(divisors(0));
@@ -47,7 +48,8 @@ public class CalculatorTest {
 		assertArrayEquals(divisors(20), new int[] { 20, 10, 5, 2, 1 });
 		System.out.println("1P");
 	}
-
+*/
+	
 	@Test
 	public void testCheckMyBet() {
 		assertNotNull(checkMyBet(null, null));

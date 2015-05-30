@@ -40,10 +40,21 @@ public class Calculator {
 	/*
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
 	 * divisores que tiene.
-	 */
+	 
 	static int[] divisors(int n) {
-		return null;
+		int resultado[] = new int[10];
+		int i = 0;
+		int aux = 0;
+		for (i = n ; i >= 0 ; i--) {
+			if (n % i == 0) {
+            	System.out.println (i);
+            	resultado[aux] = i;
+            	aux++;
+			}
+		}
+		return resultado;
 	}
+	*/
 	
 	/*
 	 * Toma como parámetros dos listas. La primera con los 6 números de una
