@@ -7,7 +7,10 @@ public class Calculator {
 	 * este metodo calcula el seno de un angulo
 	 */
 	static Double sin(double n) {
-		return null;
+		double seno = Math.sin(Math.toRadians(n));
+		double resultado = Math.rint(seno * 100) / 100;
+		System.out.println(resultado);
+		return resultado;
 	}
 
 	/*
