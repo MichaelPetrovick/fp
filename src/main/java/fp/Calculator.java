@@ -8,15 +8,14 @@ public class Calculator {
 	 * este metodo calcula el seno de un angulo
 	 */
 	static Double sin(double n) {
-		double seno = Math.sin(Math.toRadians(n));
-		double resultado = Math.rint(seno * 100) / 100;
-		System.out.println(resultado);
+		double seno = (Math.sin(Math.toRadians(n)));
+		double resultado =  Math.round(seno*Math.pow(10,1))/Math.pow(10,1);
 		return resultado;
 	}
 
 	/*
 	 * Escribir todos los números del number al 0 de step en step.
-	
+	 */
 	static int[] stepThisNumber(int number, int step) {
 		int resultado[] = new int[10];
 		int cont = 0;
@@ -36,12 +35,11 @@ public class Calculator {
 		System.out.println(resultado[2]);
 		return resultado;
 	}
-	*/
 	
 	/*
 	 * Módulo al que se le pasa un número entero del 0 al 20 y devuelve los
 	 * divisores que tiene.
-	 
+	 */
 	static int[] divisors(int n) {
 		int resultado[] = new int[10];
 		int i = 0;
@@ -55,7 +53,6 @@ public class Calculator {
 		}
 		return resultado;
 	}
-	*/
 	
 	/*
 	 * Toma como parámetros dos listas. La primera con los 6 números de una
